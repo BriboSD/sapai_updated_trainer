@@ -64,7 +64,7 @@ data = {
             },
             "tier": 1,
             "baseAttack": 2,
-            "baseHealth": 1,
+            "baseHealth": 2,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
                 "description": "Faint: Give a random friend +2/+1",
@@ -72,7 +72,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 2,
+                    "attackAmount": 1,
                     "healthAmount": 1,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
@@ -84,7 +84,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 4,
+                    "attackAmount": 2,
                     "healthAmount": 2,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
@@ -96,7 +96,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "attackAmount": 6,
+                    "attackAmount": 3,
                     "healthAmount": 3,
                     "target": {"kind": "RandomFriend", "n": 1},
                     "untilEndOfBattle": False,
@@ -255,7 +255,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 1,
+                    "attackAmount": 1,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
@@ -266,7 +266,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 2,
+                    "attackAmount": 2,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
@@ -277,7 +277,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "healthAmount": 3,
+                    "attackAmount": 3,
                     "target": {"kind": "RandomFriend", "n": 2},
                     "untilEndOfBattle": False,
                 },
@@ -838,7 +838,7 @@ data = {
             },
             "tier": 1,
             "baseAttack": 2,
-            "baseHealth": 3,
+            "baseHealth": 2,
             "packs": ["StandardPack"],
             "level1Ability": {
                 "description": "Sell: Give shop animals +1 Health",
@@ -953,15 +953,15 @@ data = {
             },
             "tier": 1,
             "baseAttack": 2,
-            "baseHealth": 2,
+            "baseHealth": 3,
             "packs": ["StandardPack", "ExpansionPack1"],
             "level1Ability": {
-                "description": "Level-up: Give all friends +1/+1",
+                "description": "Level-up: Give two friends +1/+1",
                 "trigger": "LevelUp",
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "target": {"kind": "EachFriend"},
+                    "target": {"kind": "RandomFriend", "n": 2},
                     "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
@@ -973,7 +973,7 @@ data = {
                 "triggeredBy": {"kind": "Self"},
                 "effect": {
                     "kind": "ModifyStats",
-                    "target": {"kind": "EachFriend"},
+                    "target": {"kind": "RandomFriend", "n": 2},
                     "attackAmount": 2,
                     "healthAmount": 2,
                     "untilEndOfBattle": False,
@@ -1368,23 +1368,23 @@ data = {
                 },
             },
             "level2Ability": {
-                "description": "Start of battle: Deal 2 damage to a random enemy",
+                "description": "Start of battle: Deal 1 damage to two random enemies",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "DealDamage",
-                    "target": {"kind": "RandomEnemy", "n": 2},
-                    "amount": 1,
+                    "target": {"kind": "RandomEnemy", "n": 1},
+                    "amount": 2,
                 },
             },
             "level3Ability": {
-                "description": "Start of battle: Deal 3 damage to a random enemy",
+                "description": "Start of battle: Deal 1 damage to three random enemies",
                 "trigger": "StartOfBattle",
                 "triggeredBy": {"kind": "Player"},
                 "effect": {
                     "kind": "DealDamage",
-                    "target": {"kind": "RandomEnemy", "n": 3},
-                    "amount": 1,
+                    "target": {"kind": "RandomEnemy", "n": 1},
+                    "amount": 3,
                 },
             },
             "probabilities": [
@@ -1532,7 +1532,7 @@ data = {
             },
             "tier": 1,
             "baseAttack": 1,
-            "baseHealth": 2,
+            "baseHealth": 4,
             "packs": ["StandardPack"],
             "level1Ability": {
                 "description": "Buy: Give one random friend +1/+1",
@@ -1541,7 +1541,6 @@ data = {
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 1},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
@@ -1553,7 +1552,6 @@ data = {
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 2},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
@@ -1565,7 +1563,6 @@ data = {
                 "effect": {
                     "kind": "ModifyStats",
                     "target": {"kind": "RandomFriend", "n": 3},
-                    "attackAmount": 1,
                     "healthAmount": 1,
                     "untilEndOfBattle": False,
                 },
