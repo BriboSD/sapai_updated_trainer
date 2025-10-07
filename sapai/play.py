@@ -24,7 +24,7 @@ class Play:
 
     def __init__(self, players=None, mode="tournament"):
         players = players or []
-
+        
         raise NotImplementedError
 
 
