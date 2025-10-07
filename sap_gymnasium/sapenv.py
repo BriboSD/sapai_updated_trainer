@@ -9,7 +9,7 @@ class sapenv(gym.Env):
     ALL_PETS = ["pet-ant", "pet-duck", "pet-otter", "pet-pig", "pet-ant", "pet-mosquito", "pet-fish", "pet-cricket", "pet-horse"]
     ALL_FOOD = ["food-apple", "food-honey"]
     ALL_STATUS = ["status-honey-bee"]
-    MAX_PET_SHOP_SLOTS = 6
+    MAX_PET_SHOP_SLOTS = 16
     MAX_FOOD_SHOP_SLOTS = 2
     MAX_TEAM_SLOTS = 5
     MAX_LIVES = 10
@@ -86,13 +86,9 @@ class sapenv(gym.Env):
         
         #encode shop pets, then add an encoding representing frozen slots
         encoded_shop_pet_list = self.encode_pets(shop_pets)
-        
-
-
-
-
-
-
+        for shopSlot in self.player.shop:
+            if 
+        #next step is to write code for freezing being encoded
             
 
     def encode_pets(self, pets):
